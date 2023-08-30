@@ -3,13 +3,16 @@ Banco de Dados para Projeto Final do Curso Ciência de Dados by DIO - IFood
 
 
 
-- [Tópico 1: Curiosidades sobre o Universo](#tópico-1-curiosidades-sobre-o-universo)
+- [Desafio Parte 1: Criando o Diagrama no MysSQL Workbench](#diagrama-do-banco-de-dados)
 
 
 - [Tópico 2: Maravilhas Naturais](#tópico-2-maravilhas-naturais)
 
 
 - [Tópico 3: Tecnologias Inovadoras](#tópico-3-tecnologias-inovadoras)
+
+## Diagrama do Banco de Dados
+[DIAGRAMA DO BANCO DE DADOS]![image](https://github.com/wellingtonb3/ecommerce-ifood/assets/130426959/ee1cd04e-43a8-4763-93ff-4bc6a208a4f8)
 
 
 
@@ -54,7 +57,7 @@ Espero que você tenha desfrutado das informações apresentadas nesta página. 
 
 
 
-[DIAGRAMA DO BANCO DE DADOS]![image](https://github.com/wellingtonb3/ecommerce-ifood/assets/130426959/ee1cd04e-43a8-4763-93ff-4bc6a208a4f8)
+
 
 
 
