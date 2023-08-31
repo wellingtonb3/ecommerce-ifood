@@ -12,7 +12,7 @@
 - [Desafio Parte 3: Inserindo Dados no Banco via MySQL](#inserindo-dados-no-banco-via-mysql)
 
 
-- [Desafio Parte 4: Criando Queries](#desafio-parte-4-criando-queries)
+- [Desafio Parte 4: Criando Queries](#desafio-parte-4---criando-queries)
 
 
 ## Desafio Parte 1 - Diagrama do Banco de Dados
