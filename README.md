@@ -11,12 +11,16 @@
 
 - [Desafio Parte 3: Inserindo Dados no Banco via MySQL](#inserindo-dados-no-banco-via-mysql)
 
-## Diagrama do Banco de Dados
+
+- [Desafio Parte 4: Criando Queries](#desafio-parte-4-criando-queries)
+
+
+## Desafio Parte 1 - Diagrama do Banco de Dados
 [DIAGRAMA DO BANCO DE DADOS]![image](https://github.com/wellingtonb3/ecommerce-ifood/assets/130426959/ee1cd04e-43a8-4763-93ff-4bc6a208a4f8)
 
 [VOLTAR](#ecommerce-ifood)
 
-## Script das Tabelas e Constraints
+## Desafio Parte 2 - Script das Tabelas e Constraints
 
 ### Criando o Banco de Dados
 
@@ -253,7 +257,7 @@ Comandos úteis
 [VOLTAR](#ecommerce-ifood)
 
 
-## Inserindo Dados no Banco via MySQL
+## Desafio Parte 3 - Inserindo Dados no Banco via MySQL
 
 
 -- inserção de dados
@@ -428,40 +432,14 @@ select * from payment;
 
 [VOLTAR](#ecommerce-ifood)
 
-## Introdução
-Bem-vindo à minha página interessante! Nesta página, vou compartilhar informações fascinantes sobre diversos tópicos.
+## Desafio Parte 4 - Criando Queries
 
-## Tópico 1: Curiosidades sobre o Universo
-Nesta seção, exploraremos fatos incríveis sobre o cosmos.as
+[VOLTAR](#ecommerce-ifood)
 
 
-### A Via Láctea
-Saiba mais sobre a nossa galáxia e suas características.
-
-### Buracos Negros
-Descubra como os buracos negros se formam e seu papel no espaço.
-
-## Tópico 2: Maravilhas Naturais
-A natureza é repleta de fenômenos incríveis.
-
-### Aurora Boreal
-Aprenda sobre o espetáculo de luzes no céu ártico.
-
-### Cachoeiras Gigantes
-Conheça algumas das cachoeiras mais impressionantes do mundo.
-
-## Tópico 3: Tecnologias Inovadoras
 Explore as últimas inovações tecnológicas.asdfasdfs
 #tópico-1-curiosidades-sobre-o-universo
 
-### Inteligência Artificial
-Descubra como a IA está transformando nosso mundo.
-
-### Realidade Virtual
-Saiba como a realidade virtual está revolucionando a forma como interagimos com a tecnologia.
-
-## Conclusão
-Espero que você tenha desfrutado das informações apresentadas nesta página. Sinta-se à vontade para explorar mais sobre esses tópicos incríveis!
 
 ---
 
