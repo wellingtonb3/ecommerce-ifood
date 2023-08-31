@@ -3,13 +3,13 @@
 ## Banco de Dados para Projeto Final do Curso Ciência de Dados by DIO - IFood
 
 
-- [Desafio Parte 1: Criando o Diagrama no MysSQL Workbench](#diagrama-do-banco-de-dados)
+- [Desafio Parte 1: Criando o Diagrama no MysSQL Workbench](#desafio-parte-1---diagrama-do-banco-de-dados)
 
 
-- [Desafio Parte 2: Criando o Script das Tabelas e Constraints](#script-das-tabelas-e-constraints)
+- [Desafio Parte 2: Criando o Script das Tabelas e Constraints](#desafio-parte-2---script-das-tabelas-e-constraints)
 
 
-- [Desafio Parte 3: Inserindo Dados no Banco via MySQL](#inserindo-dados-no-banco-via-mysql)
+- [Desafio Parte 3: Inserindo Dados no Banco via MySQL](#desafio-parte-3---inserindo-dados-no-banco-via-mysql)
 
 
 - [Desafio Parte 4: Criando Queries](#desafio-parte-4---criando-queries)
