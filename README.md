@@ -9,14 +9,14 @@
 - [Desafio Parte 2: Criando o Script das Tabelas e Constraints](#script-das-tabelas-e-constraints)
 
 
-- [Tópico 3: Tecnologias Inovadoras](#tópico-3-tecnologias-inovadoras)
+- [Desafio Parte 3: Inserindo Dados no Banco via MySQL](#tópico-3-tecnologias-inovadoras)
 
 ## Diagrama do Banco de Dados
 [DIAGRAMA DO BANCO DE DADOS]![image](https://github.com/wellingtonb3/ecommerce-ifood/assets/130426959/ee1cd04e-43a8-4763-93ff-4bc6a208a4f8)
 
 [VOLTAR](#ecommerce-ifood)
 
-## Script das Tabelas e Constraints
+# Script das Tabelas e Constraints
 
 ### Criando o Banco de Dados
 
@@ -125,7 +125,7 @@ desc supplier;
 
 -----------------------------------------------------------------------
 
-## Criando a tabela Vendedor CNPJ
+### Criando a tabela Vendedor CNPJ
 ```python
 
 create table seller(
@@ -252,7 +252,9 @@ Comandos úteis
 
 [VOLTAR](#ecommerce-ifood)
 
-# Minha Página Interessante
+
+# Inserindo Dados no Banco via MySQL
+
 
 [VOLTAR](#ecommerce-ifood)
 
