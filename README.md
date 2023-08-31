@@ -342,6 +342,7 @@ select * from productorder;
 ```mysql
 
 desc productstock;
+
 insert into productstock (stocklocation, quantity) values
 	('São Paulo', 1000),
         ('Santa Catarina', 400),
@@ -358,6 +359,7 @@ select * from productstock;
 ```mysql
 
 desc stocklocation;
+
 insert into stocklocation (idLproduct, idLstock, location) values
 	(1, 2, 'SP'),
         (2, 5, 'MG');
