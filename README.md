@@ -35,7 +35,7 @@ use ecommerce1;
 
 ### Criando a Tabela Cliente
 
-```
+```mysql
 create table clients(
 	idClient int auto_increment primary key,
         type_client ENUM('Pessoa Física', 'Pessoa Jurídica') not null,
@@ -60,7 +60,7 @@ desc clients;
 
 ### Criando a Tabela Produto
 
-```python
+```mysql
 create table product(
 	idProduct int auto_increment primary key,
 	pname varchar (10) not null, 
@@ -77,7 +77,8 @@ alter table product auto_increment = 1;
 --------------------------------------------------------------------------
 
 ### Criando a Tabela Pedido
-```python
+```mysql
+
  create table orders(
 	idOrder int auto_increment primary key,
 	idOrderClient int,
@@ -98,7 +99,7 @@ desc orders;
 
 
 ### Criando a tabela Estoque
-```python
+```mysql
 
 create table productstock(
 	idProdStock int auto_increment primary key,
@@ -113,7 +114,7 @@ alter table productstock auto_increment = 1;
 -------------------------------------------------------------------------
 
 ### Criando a tabela Fornecedor
-```python
+```mysql
 
 create table supplier(
 	idSupplier int auto_increment primary key,
@@ -130,7 +131,7 @@ desc supplier;
 -----------------------------------------------------------------------
 
 ### Criando a tabela Vendedor CNPJ
-```python
+```mysql
 
 create table seller(
 	idSeller int auto_increment primary key,
@@ -151,7 +152,7 @@ alter table seller auto_increment = 1;
 -----------------------------------------------------------------------
 
 ### Criando a tabela Produtos Vendedor
-```python
+```mysql
 
 create table product_seller(
 	idPseller int,
@@ -169,7 +170,7 @@ desc product_seller;
 -------------------------------------------------------------------------
 
 ### Criando a tabela Produto / Pedido
-```python
+```mysql
 
 create table productorder(
 	idPOproduct int,
@@ -186,7 +187,7 @@ create table productorder(
 --------------------------------------------------------------------------
 
 ### Criando a tabela Localização do Estoque
-```python
+```mysql
 
 create table stocklocation(
 	idLproduct int,
@@ -204,7 +205,8 @@ create table stocklocation(
 
 
 ### Criando a tabela Produto Fornecedor
-```python
+```mysql
+
 create table productsupplier(
 	idPsSupplier int,
 	idPsProduct int,
@@ -220,7 +222,8 @@ desc productsupplier;
 -----------------------------------------------------------------------------
 
 ### Criando a tabela Pagamento
-```python
+```mysql
+
 create table payment(
 	idPayment int auto_increment primary key,
 	idOPayment int,
@@ -261,15 +264,18 @@ Comandos úteis
 
 
 -- inserção de dados
-```
+```mysql
+
 use ecommerce1;
 show tables;
 ```
 ---------------------------------------------------------------------------
 
-```
+```mysql
+
 desc clients;
 -- idClient, type_client, cpf, fname, minit, lname, cnpj, businessname, address, phone_number
+
 insert into clients (type_client, cpf, fname, minit, lname, cnpj, businessname, address, phone_number) values
 	('Pessoa_Física', '29537472910','Maria', 'E', 'Ferreira', null , null, 'Av Treze 41, Jamba - Gusmão', '31 45983385'),
         ('Pessoa_Jurídica', null, null, null, null, 45284901000321, 'Acording System', 'Rua Jota 32, Pamonhas - Jequi', '41 45983210'),
@@ -284,7 +290,8 @@ select * from clients;
 
 ---------------------------------------------------------------------------
 
-```
+```mysql
+
 desc product;
 -- idProduct, pname, category ('Eletrônicos','Vestuario','Brinquedos','Alimentos','Móveis'), for_kids boolean, review, dimensions(10)
 
@@ -301,7 +308,8 @@ select * from product;
 
 ---------------------------------------------------------------------------
 
-```
+```mysql
+
 desc orders;
 -- idOrder, idOrderClient, orderstatus, orderdescription, freight, delivery, delivery_number
 
@@ -316,7 +324,8 @@ select * from orders;
 
 ------------------------------------------------------------------------
 
-```
+```mysql
+
 desc productorder;
 -- idPOproduct, idOorder, poquantity, postatus
 
@@ -330,7 +339,8 @@ select * from productorder;
 
 ---------------------------------------------------------------------------
 
-```
+```mysql
+
 desc productstock;
 insert into productstock (stocklocation, quantity) values
 	('São Paulo', 1000),
@@ -345,7 +355,8 @@ select * from productstock;
                         
 ---------------------------------------------------------------------
 
-```
+```mysql
+
 desc stocklocation;
 insert into stocklocation (idLproduct, idLstock, location) values
 	(1, 2, 'SP'),
@@ -356,7 +367,8 @@ select * from stocklocation;
 
 ----------------------------------------------------------------------
 
-```
+```mysql
+
 desc supplier;
 -- idSupplier, businessname, cnpj, phone_number
 
@@ -370,7 +382,8 @@ select * from supplier;
 
 ---------------------------------------------------------------------------
 
-```
+```mysql
+
 desc seller;
 -- idSeller, businessname, companyname, address, cnpj, cpf, contact
 
@@ -384,7 +397,8 @@ select * from seller;
 
 -------------------------------------------------------------------------
 
-```
+```mysql
+
 desc product_seller;
 -- idPseller, idProduct, prodquantity
 
@@ -400,7 +414,8 @@ select * from product_seller;
 
 ----------------------------------------------------------------------
 
-```
+```mysql
+
 desc productsupplier;
 
 insert into productsupplier (idPsSupplier, idPsProduct, quantity) values
@@ -415,7 +430,8 @@ select * from productsupplier;
 
 -------------------------------------------------------------------------
 
-```
+```mysql
+
 desc payment;
 
 insert into payment (idOPayment, total_value, payment_date, type_payment, card_number, expiration_date, security_code, bank_slipcode) values
