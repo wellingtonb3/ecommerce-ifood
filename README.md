@@ -19,18 +19,18 @@
 ## Script das Tabelas e Constraints
 
 
-```diff
+```
 -- criação do banco de dados para o cenário de E-commerce
 
-
--- drop database ecommerce1;
 create database ecommerce1;
 use ecommerce1;--
-````
+```
 
 
 
 criar tabela cliente
+
+```
 -- create table clients(
 	idClient int auto_increment primary key,
         type_client ENUM('Pessoa Física', 'Pessoa Jurídica') not null,
@@ -48,7 +48,8 @@ criar tabela cliente
 
 alter table clients auto_increment = 1;
 
-desc clients;```
+desc clients;
+```
 
 ------------------------------------------------------------------------
 
@@ -63,7 +64,8 @@ desc clients;```
 	dimensions varchar(10)
 );
 
-alter table product auto_increment = 1;```
+alter table product auto_increment = 1;
+```
 
 
 --------------------------------------------------------------------------
@@ -84,7 +86,8 @@ alter table product auto_increment = 1;```
 
 alter table orders auto_increment = 1;
 
-desc orders;```
+desc orders;
+```
 
 
 -------------------------------------------------------------------------
@@ -98,7 +101,8 @@ desc orders;```
 	quantity int default 0
 );
 
-alter table productstock auto_increment = 1;```
+alter table productstock auto_increment = 1;
+```
 
 
 -------------------------------------------------------------------------
@@ -114,7 +118,8 @@ alter table productstock auto_increment = 1;```
         constraint unique_supplier unique (cnpj)
 );
 alter table supplier auto_increment = 1;
-desc supplier;```
+desc supplier;
+```
 
 
 -----------------------------------------------------------------------
@@ -134,7 +139,8 @@ create table seller(
         constraint unique_cpf_seller unique (cpf)
 );
 
-alter table seller auto_increment = 1;```
+alter table seller auto_increment = 1;
+```
 
 
 -----------------------------------------------------------------------
@@ -151,7 +157,8 @@ create table product_seller(
 	constraint fk_product_product foreign key (idProduct) references product (idProduct)
 );
 
-desc product_seller;```
+desc product_seller;
+```
 
 
 -------------------------------------------------------------------------
@@ -167,7 +174,8 @@ create table productorder(
 	primary key (idPOproduct, idPOorder),
 	constraint fk_productorder_seller foreign key (idPOproduct) references product(idProduct),
 	constraint fk_productorder_product foreign key (idPOorder) references orders(idOrder)
-);```
+);
+```
 
 
 --------------------------------------------------------------------------
@@ -181,7 +189,8 @@ create table stocklocation(
 	primary key (idLproduct, idLstock),
 	constraint fk_stock_location_product foreign key (idLproduct) references product(idProduct),
 	constraint fk_stock_location_stock foreign key (idLstock) references productStock(idProdStock)
-    );```
+    );
+```
 
 
 
@@ -198,7 +207,8 @@ create table productsupplier(
 	constraint fk_product_supplier_supplier foreign key (idPsSupplier) references supplier(idSupplier),
 	constraint fk_product_supplier_product foreign key (idPsProduct) references product (idProduct)
 );
-desc productsupplier;```
+desc productsupplier;
+```
 
 
 -----------------------------------------------------------------------------
@@ -220,12 +230,14 @@ create table payment(
 );
 alter table payment auto_increment = 1;
 
-desc payment;```
+desc payment;
+```
 
 
 --------------------------------------------------------------------------
 
-
+Comandos úteis
+```
 -- show tables;
 -- show databases;
 -- use information_schema;
@@ -234,7 +246,7 @@ desc payment;```
 -- desc referential_constraints;
 -- select * from referential_constraints;
 -- select * from referential_constraints where constraint_schema = 'ecommerce1';''''
-
+```
 
 [VOLTAR](#ecommerce-ifood)
 
@@ -293,82 +305,3 @@ Espero que você tenha desfrutado das informações apresentadas nesta página. 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### ecommerce-ifood2
-
-G
-DFG
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
-
-
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
-### ecommerce-ifood2
