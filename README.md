@@ -18,16 +18,19 @@
 
 ## Script das Tabelas e Constraints
 
+
+```diff
 -- criação do banco de dados para o cenário de E-commerce
+
+
 -- drop database ecommerce1;
 create database ecommerce1;
-use ecommerce1;
+use ecommerce1;--
+````
 
 
-------------------------------------------------------------------------
 
-
-```python criar tabela cliente
+criar tabela cliente
 -- create table clients(
 	idClient int auto_increment primary key,
         type_client ENUM('Pessoa Física', 'Pessoa Jurídica') not null,
@@ -47,7 +50,7 @@ alter table clients auto_increment = 1;
 
 desc clients;```
 
---------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 
 ```python-- criar tabela produto
