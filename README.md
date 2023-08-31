@@ -18,20 +18,21 @@
 
 ## Script das Tabelas e Constraints
 
+### Criando o Banco de Dados
 
 ```
 -- criação do banco de dados para o cenário de E-commerce
 
 create database ecommerce1;
-use ecommerce1;--
+use ecommerce1;
 ```
 
 
 
-criar tabela cliente
+### Criando a Tabela Cliente
 
 ```
--- create table clients(
+create table clients(
 	idClient int auto_increment primary key,
         type_client ENUM('Pessoa Física', 'Pessoa Jurídica') not null,
         cpf char(11),
@@ -53,9 +54,10 @@ desc clients;
 
 ------------------------------------------------------------------------
 
+### Criando a Tabela Produto
 
-```python-- criar tabela produto
-	create table product(
+```python
+create table product(
 	idProduct int auto_increment primary key,
 	pname varchar (10) not null, 
 	category enum("Eletrônicos","Vestuario","Brinquedos","Alimentos","Móveis") not null,
@@ -70,9 +72,8 @@ alter table product auto_increment = 1;
 
 --------------------------------------------------------------------------
 
-
-```python-- criar tabela pedido
-
+### Criando a Tabela Pedido
+```python
  create table orders(
 	idOrder int auto_increment primary key,
 	idOrderClient int,
@@ -89,13 +90,13 @@ alter table orders auto_increment = 1;
 desc orders;
 ```
 
-
 -------------------------------------------------------------------------
 
 
-```python-- criar tabela estoque
+### Criando a tabela Estoque
+```python
 
-	create table productstock(
+create table productstock(
 	idProdStock int auto_increment primary key,
 	stocklocation varchar(255),
 	quantity int default 0
@@ -107,10 +108,10 @@ alter table productstock auto_increment = 1;
 
 -------------------------------------------------------------------------
 
+### Criando a tabela Fornecedor
+```python
 
-```python-- criar tabela fornecedor
-
-	create table supplier(
+create table supplier(
 	idSupplier int auto_increment primary key,
 	businessname varchar(255) not null,
 	cnpj char(15) not null,
@@ -124,8 +125,8 @@ desc supplier;
 
 -----------------------------------------------------------------------
 
-
-```python-- criar tabela vendedor CNPJ
+## Criando a tabela Vendedor CNPJ
+```python
 
 create table seller(
 	idSeller int auto_increment primary key,
@@ -145,8 +146,8 @@ alter table seller auto_increment = 1;
 
 -----------------------------------------------------------------------
 
-
-```python-- criar tabela produtos_vendedor
+### Criando a tabela Produtos Vendedor
+```python
 
 create table product_seller(
 	idPseller int,
@@ -163,8 +164,8 @@ desc product_seller;
 
 -------------------------------------------------------------------------
 
-
-```python-- criar tabela Produto/pedido
+### Criando a tabela Produto / Pedido
+```python
 
 create table productorder(
 	idPOproduct int,
@@ -180,8 +181,9 @@ create table productorder(
 
 --------------------------------------------------------------------------
 
+### Criando a tabela Localização do Estoque
+```python
 
-```python-- criar tabela Localização do Estoque
 create table stocklocation(
 	idLproduct int,
 	idLstock int,
@@ -197,8 +199,8 @@ create table stocklocation(
 ---------------------------------------------------------------------------
 
 
-
-```python-- criar tabela Produto Fornecedor
+### Criando a tabela Produto Fornecedor
+```python
 create table productsupplier(
 	idPsSupplier int,
 	idPsProduct int,
@@ -213,8 +215,8 @@ desc productsupplier;
 
 -----------------------------------------------------------------------------
 
-
-```python-- criar tabela Pagamento
+### Criando a tabela Pagamento
+```python
 create table payment(
 	idPayment int auto_increment primary key,
 	idOPayment int,
