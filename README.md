@@ -1,4 +1,4 @@
-### Ecommerce-Ifood
+# Ecommerce-Ifood
 
 ## Banco de Dados para Projeto Final do Curso Ciência de Dados by DIO - IFood
 
@@ -16,7 +16,7 @@
 
 [VOLTAR](#ecommerce-ifood)
 
-# Script das Tabelas e Constraints
+## Script das Tabelas e Constraints
 
 ### Criando o Banco de Dados
 
@@ -253,7 +253,177 @@ Comandos úteis
 [VOLTAR](#ecommerce-ifood)
 
 
-# Inserindo Dados no Banco via MySQL
+## Inserindo Dados no Banco via MySQL
+
+
+-- inserção de dados
+```
+use ecommerce1;
+show tables;
+```
+---------------------------------------------------------------------------
+
+```
+desc clients;
+-- idClient, type_client, cpf, fname, minit, lname, cnpj, businessname, address, phone_number
+insert into clients (type_client, cpf, fname, minit, lname, cnpj, businessname, address, phone_number) values
+	('Pessoa_Física', '29537472910','Maria', 'E', 'Ferreira', null , null, 'Av Treze 41, Jamba - Gusmão', '31 45983385'),
+        ('Pessoa_Jurídica', null, null, null, null, 45284901000321, 'Acording System', 'Rua Jota 32, Pamonhas - Jequi', '41 45983210'),
+	('Pessoa_Física', '29347472910','Maria', 'E', 'Ferreira', null , null, 'Av Treze 41, Jamba - Gusmão', '31 45983385'),
+        ('Pessoa_Física', '48302769178', 'José', 'G', 'Alandra', null, null, 'Rua Santa 52, Gara - Jarandi', '11 49603377'),
+        ('Pessoa_Jurídica', null, null, null, null, 47295789000156, 'Pururu Aços', 'Rua Jota 32, Pamonhas - Jequi', '21 55983567'),
+        ('Pessoa_Física', '48702769331', 'José', 'G', 'Alandra', null, null, 'Rua Dio 36, Ilha - Betiquita', '15 39563355'),
+	('Pessoa_Jurídica', null, null, null, null, 29367912000177, 'Casa Móveis', 'Rua Gari 26, Camba - Jetu', '21 46333567');
+          
+select * from clients;
+```
+
+---------------------------------------------------------------------------
+
+```
+desc product;
+-- idProduct, pname, category ('Eletrônicos','Vestuario','Brinquedos','Alimentos','Móveis'), for_kids boolean, review, dimensions(10)
+
+insert into product (pname, category, for_kids, review, dimensions) values
+	('Gabinete', 'Eletrônicos', false, '5', null),
+        ('Bombons', 'Alimentos', false, '5', null),
+        ('GeForce', 'Eletrônicos', false, '5', null),
+        ('Estante', 'Móveis', false, '3', null),
+        ('Super Mar', 'Brinquedos', true, '4', null),
+        ('Calça Big', 'Vestuario', false, '4', null);
+
+select * from product;
+```
+
+---------------------------------------------------------------------------
+
+```
+desc orders;
+-- idOrder, idOrderClient, orderstatus, orderdescription, freight, delivery, delivery_number
+
+insert into orders (idOrderClient, orderstatus, orderdescription, freight, delivery, delivery_number) values
+	(8, 'Em processamento', 'Webserver3', 22, 'Em preparação', null ),
+        (9, 'Confirmado', 'Webserver2', 27, 'Enviado', 'BC234654367BR'),
+        (10, 'Em processamento', 'WebServer1', 12, 'Em preparação', 'AB376347656BR'),
+        (11, 'Cancelado', 'Webserver2', 19, null, null);
+
+select * from orders;
+```
+
+------------------------------------------------------------------------
+
+```
+desc productorder;
+-- idPOproduct, idOorder, poquantity, postatus
+
+insert into productorder (idPOproduct, idPOorder, poquantity, postatus) values
+	(1,5,2,default),
+        (2,6,1,default),
+        (3,7,1,default);
+
+select * from productorder;
+```
+
+---------------------------------------------------------------------------
+
+```
+desc productstock;
+insert into productstock (stocklocation, quantity) values
+	('São Paulo', 1000),
+        ('Santa Catarina', 400),
+        ('São Paulo', 250),
+        ('Minas Gerais', 1000),
+        ('Rio de Janeiro', 230),
+        ('Alagoas', 3000);
+
+select * from productstock;
+```
+                        
+---------------------------------------------------------------------
+
+```
+desc stocklocation;
+insert into stocklocation (idLproduct, idLstock, location) values
+	(1, 2, 'SP'),
+        (2, 5, 'MG');
+
+select * from stocklocation;
+```
+
+----------------------------------------------------------------------
+
+```
+desc supplier;
+-- idSupplier, businessname, cnpj, phone_number
+
+insert into supplier (businessname, cnpj, phone_number)values
+	('Lan Distribuidora',386556730001-54,'34 34664455'),
+        ('Max Produtos',824556730001-54,'34 34664455'),
+        ('STC Alimentos' ,453956730001-54,'34 34664455');
+
+select * from supplier;
+```
+
+---------------------------------------------------------------------------
+
+```
+desc seller;
+-- idSeller, businessname, companyname, address, cnpj, cpf, contact
+
+insert into seller (businessname, companyname, address, cnpj, cpf, contact) values
+	('Randi ltda', 'Devox', 'Rua Treze, 415 - Landau - Bahia', 543743540001-56, 346756712, 7134556677),
+        ('DVX S/C', 'Ritx', 'Av Eng Heitor, 741 - Amazu - Santa Catarina', 562347450001-65, 744756722, 7139673474),
+        ('Lauaz ltda ME', 'Sac', 'Rua Treze, 658 - Landau - Alagoas', 456783540001-16, 256756755, 5157445655);
+
+select * from seller;   
+```
+
+-------------------------------------------------------------------------
+
+```
+desc product_seller;
+-- idPseller, idProduct, prodquantity
+
+insert into product_seller (idPseller, idProduct, prodquantity) values
+	(1, 2, 4500),
+        (1, 3, 1500),
+        (3, 4, 440),
+        (2, 5, 500),
+        (1, 611, 100);
+
+select * from product_seller;
+```
+
+----------------------------------------------------------------------
+
+```
+desc productsupplier;
+
+insert into productsupplier (idPsSupplier, idPsProduct, quantity) values
+	(1, 2, 4500),
+        (1, 3, 1500),
+        (3, 4, 440),
+        (2, 5, 500),
+        (1, 6, 100);
+
+select * from productsupplier;
+```
+
+-------------------------------------------------------------------------
+
+```
+desc payment;
+
+insert into payment (idOPayment, total_value, payment_date, type_payment, card_number, expiration_date, security_code, bank_slipcode) values
+        (5, 229.00, '2023-04-12', default, 4533432275643544, '2027-05-01', 321, null),
+        (6, 124.00, '2023-02-28', 'Boleto', null, null, null, 42376598765367845345),
+        (7, 329.00, '2023-04-14', default, 1267432275643544, '2028-05-01', 221, null),					
+        (8, 125.00, '2023-03-28', 'Boleto', null, null, null, 16776598765367845345);
+
+select * from payment;
+```
+
+---------------------------------------------------------------------------
 
 
 [VOLTAR](#ecommerce-ifood)
