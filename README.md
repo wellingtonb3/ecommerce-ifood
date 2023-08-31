@@ -432,17 +432,9 @@ select * from payment;
 
 [VOLTAR](#ecommerce-ifood)
 
+
 ## Desafio Parte 4 - Criando Queries
 
-[VOLTAR](#ecommerce-ifood)
-
-
-Explore as últimas inovações tecnológicas.asdfasdfs
-#tópico-1-curiosidades-sobre-o-universo
-
-
----
-
 
 
 
@@ -454,6 +446,7 @@ Explore as últimas inovações tecnológicas.asdfasdfs
 
 
 [VOLTAR](#ecommerce-ifood)
+
 
 
 
