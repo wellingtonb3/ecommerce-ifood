@@ -465,8 +465,6 @@ select * from payment;
 ## Desafio Parte 4 - Criando Queries
 
 
--- QUERIES
-
 -- SELECIONE OS PEDIDOS EFETUADOS COM OS DADOS DE SEUS DEVIDOS COMPRADORES
 ```mysql
 select * from clients inner join orders ON idClient = idOrderClient;
@@ -475,45 +473,46 @@ select * from clients inner join orders ON idClient = idOrderClient;
 ```mysql
 select * from clients as c, orders as o where (c.idClient = o.idOrderClient);
 ```
+---------------------------------------------------------------------------
 
 -- SELECIONE TODOS OS CLIENTES SEPARANDO POR PESSOA FÍSICA E JURÍDICA
 ```mysql
 select * from clients order by type_client;
 ```
-
+---------------------------------------------------------------------------
 -- SELECIONE O TELEFONE DO CLIENTE COM ID NUMERO 8
 ```mysql
 select phone_number FROM clients where idClient = 8;
 ```
-
+---------------------------------------------------------------------------
 -- VERIFIQUE QUAL A QUANTIDADE DE PRODUTOS DISPONÍVEIS EM SP
 ```mysql
 select sum(quantity) from productstock where stocklocation = 'São Paulo';
 ```
-
+---------------------------------------------------------------------------
 -- SELECIONE OS PRODUTOS DISPONÍVEIS, SUAS QUANTIDADES E LOCALIDADES
 ```mysql
 select p.pname, ps.stocklocation, quantity from product as p, productstock as ps where idProduct = idProdStock;
 ```
-
+---------------------------------------------------------------------------
 -- SELECIONE OS PEDIDOS QUE FORAM PAGOS POR BOLETO BANCÁRIO
 
 ```mysql
 select *  from payment where bank_slipcode > 0;
 ```
-
+---------------------------------------------------------------------------
 -- SELECIONE OS PEDIDOS QUE FORAM PAGOS POR CARTÃO DE CRÉDITO
 ```mysql
 select *  from payment where card_number > 0;
 ```
-
+---------------------------------------------------------------------------
 -- SELECIONE OS PEDIDOS QUE ESTÃO EM PREPARAÇÃO
 ```mysql
 select * from orders where delivery = "Em preparação";
 ```
-
+---------------------------------------------------------------------------
 ### Comandos úteis para verificação das tabelas
-
+```mysql
 show tables;
 select * from clients;
 select * from orders;
@@ -526,7 +525,7 @@ select * from productsupplier;
 select * from seller;
 select * from stocklocation;
 select * from supplier;
-
+```
 
 
 [VOLTAR](#ecommerce-ifood)
