@@ -245,8 +245,8 @@ desc payment;
 
 --------------------------------------------------------------------------
 
-Comandos úteis
-```
+### Comandos úteis
+```mysql
 -- show tables;
 -- show databases;
 -- use information_schema;
@@ -263,7 +263,7 @@ Comandos úteis
 ## Desafio Parte 3 - Inserindo Dados no Banco via MySQL
 
 
--- inserção de dados
+### Acessando o Banco de Dados
 ```mysql
 
 use ecommerce1;
@@ -271,6 +271,7 @@ show tables;
 ```
 ---------------------------------------------------------------------------
 
+### Populando a tabela Clientes
 ```mysql
 
 desc clients;
@@ -290,6 +291,7 @@ select * from clients;
 
 ---------------------------------------------------------------------------
 
+### Populando a tabela Produtos
 ```mysql
 
 desc product;
@@ -308,6 +310,7 @@ select * from product;
 
 ---------------------------------------------------------------------------
 
+### Populando a tabela Pedidos
 ```mysql
 
 desc orders;
@@ -324,6 +327,7 @@ select * from orders;
 
 ------------------------------------------------------------------------
 
+### Populando a tabela Produto / Pedido
 ```mysql
 
 desc productorder;
@@ -339,6 +343,7 @@ select * from productorder;
 
 ---------------------------------------------------------------------------
 
+### Populando a tabela Estoque Localização
 ```mysql
 
 desc productstock;
@@ -356,6 +361,7 @@ select * from productstock;
                         
 ---------------------------------------------------------------------
 
+### Populando a tabela Estoque UF
 ```mysql
 
 desc stocklocation;
@@ -369,6 +375,7 @@ select * from stocklocation;
 
 ----------------------------------------------------------------------
 
+### Populando a tabela Fornecedor
 ```mysql
 
 desc supplier;
@@ -384,6 +391,7 @@ select * from supplier;
 
 ---------------------------------------------------------------------------
 
+### Populando a tabela Vendedor
 ```mysql
 
 desc seller;
@@ -399,6 +407,7 @@ select * from seller;
 
 -------------------------------------------------------------------------
 
+### Populando a tabela Produto / Vendedor
 ```mysql
 
 desc product_seller;
@@ -416,6 +425,7 @@ select * from product_seller;
 
 ----------------------------------------------------------------------
 
+### Populando a tabela Produto Fornecedor
 ```mysql
 
 desc productsupplier;
@@ -432,6 +442,7 @@ select * from productsupplier;
 
 -------------------------------------------------------------------------
 
+### Populando a tabela Pagamento
 ```mysql
 
 desc payment;
